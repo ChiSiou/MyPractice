@@ -28,5 +28,17 @@ namespace HomePage
             loan open = new loan();
             open.Show();
         }
+
+        private void btnpos_Click(object sender, EventArgs e)
+        {
+            Pos open = new Pos();
+            open.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StudentScore open = new StudentScore();
+            open.Show();
+        }
     }
 }
