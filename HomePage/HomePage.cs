@@ -40,5 +40,11 @@ namespace HomePage
             StudentScore open = new StudentScore();
             open.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OXGame open = new OXGame();
+            open.Show();
+        }
     }
 }

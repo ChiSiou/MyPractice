@@ -70,6 +70,12 @@
     <Compile Include="LoanReport.Designer.cs">
       <DependentUpon>LoanReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="OXGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OXGame.Designer.cs">
+      <DependentUpon>OXGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoanReport.resx">
       <DependentUpon>LoanReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OXGame.resx">
+      <DependentUpon>OXGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pos.resx">
       <DependentUpon>Pos.cs</DependentUpon>
