@@ -46,5 +46,11 @@ namespace HomePage
             OXGame open = new OXGame();
             open.Show();
         }
+
+        private void btnGuess_Click(object sender, EventArgs e)
+        {
+            GuessNumber open = new GuessNumber();
+            open.Show();
+        }
     }
 }

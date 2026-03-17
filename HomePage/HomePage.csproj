@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Guess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guess.Designer.cs">
+      <DependentUpon>Guess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuessNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuessNumber.Designer.cs">
+      <DependentUpon>GuessNumber.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hello.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,12 @@
     <Compile Include="StudentScore.Designer.cs">
       <DependentUpon>StudentScore.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Guess.resx">
+      <DependentUpon>Guess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuessNumber.resx">
+      <DependentUpon>GuessNumber.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hello.resx">
       <DependentUpon>Hello.cs</DependentUpon>
     </EmbeddedResource>

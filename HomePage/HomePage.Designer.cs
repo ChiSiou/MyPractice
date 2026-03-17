@@ -31,11 +31,12 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnpos = new System.Windows.Forms.Button();
             this.btnloan = new System.Windows.Forms.Button();
             this.btn0703_Hello = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnGuess = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -82,6 +83,7 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Wheat;
+            this.splitContainer2.Panel1.Controls.Add(this.btnGuess);
             this.splitContainer2.Panel1.Controls.Add(this.button2);
             this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.btnpos);
@@ -90,6 +92,19 @@
             this.splitContainer2.Size = new System.Drawing.Size(1443, 766);
             this.splitContainer2.SplitterDistance = 218;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.RosyBrown;
+            this.button2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(20, 489);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 38);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "0716_OXGame";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -143,18 +158,18 @@
             this.btn0703_Hello.UseVisualStyleBackColor = false;
             this.btn0703_Hello.Click += new System.EventHandler(this.btn0703_Hello_Click);
             // 
-            // button2
+            // btnGuess
             // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(20, 489);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 38);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "0716_OXGame";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnGuess.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnGuess.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnGuess.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGuess.Location = new System.Drawing.Point(20, 542);
+            this.btnGuess.Name = "btnGuess";
+            this.btnGuess.Size = new System.Drawing.Size(176, 38);
+            this.btnGuess.TabIndex = 5;
+            this.btnGuess.Text = "Exam_Guess";
+            this.btnGuess.UseVisualStyleBackColor = false;
+            this.btnGuess.Click += new System.EventHandler(this.btnGuess_Click);
             // 
             // HomePage
             // 
@@ -186,6 +201,7 @@
         private System.Windows.Forms.Button btnpos;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGuess;
     }
 }
 
