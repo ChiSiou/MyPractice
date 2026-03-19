@@ -31,13 +31,13 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnStudentGradeList = new System.Windows.Forms.Button();
             this.btnGuess = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnpos = new System.Windows.Forms.Button();
             this.btnloan = new System.Windows.Forms.Button();
             this.btn0703_Hello = new System.Windows.Forms.Button();
-            this.btnStudentGradeList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -51,6 +51,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -61,17 +62,19 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1443, 844);
-            this.splitContainer1.SplitterDistance = 74;
+            this.splitContainer1.Size = new System.Drawing.Size(1924, 1055);
+            this.splitContainer1.SplitterDistance = 92;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(116, 30);
+            this.label1.Location = new System.Drawing.Point(155, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 26);
+            this.label1.Size = new System.Drawing.Size(200, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "C#HomeWork";
             // 
@@ -79,6 +82,7 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -91,18 +95,38 @@
             this.splitContainer2.Panel1.Controls.Add(this.btnpos);
             this.splitContainer2.Panel1.Controls.Add(this.btnloan);
             this.splitContainer2.Panel1.Controls.Add(this.btn0703_Hello);
-            this.splitContainer2.Size = new System.Drawing.Size(1443, 766);
-            this.splitContainer2.SplitterDistance = 218;
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.splitContainer2.Size = new System.Drawing.Size(1924, 958);
+            this.splitContainer2.SplitterDistance = 290;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btnStudentGradeList
+            // 
+            this.btnStudentGradeList.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnStudentGradeList.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnStudentGradeList.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnStudentGradeList.Location = new System.Drawing.Point(28, 455);
+            this.btnStudentGradeList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStudentGradeList.Name = "btnStudentGradeList";
+            this.btnStudentGradeList.Size = new System.Drawing.Size(235, 48);
+            this.btnStudentGradeList.TabIndex = 6;
+            this.btnStudentGradeList.Text = "0710_studentGrade_list";
+            this.btnStudentGradeList.UseVisualStyleBackColor = false;
+            this.btnStudentGradeList.Click += new System.EventHandler(this.btnStudentGradeList_Click);
             // 
             // btnGuess
             // 
             this.btnGuess.BackColor = System.Drawing.Color.RosyBrown;
             this.btnGuess.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnGuess.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGuess.Location = new System.Drawing.Point(20, 542);
+            this.btnGuess.Location = new System.Drawing.Point(27, 678);
+            this.btnGuess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuess.Name = "btnGuess";
-            this.btnGuess.Size = new System.Drawing.Size(176, 38);
+            this.btnGuess.Size = new System.Drawing.Size(235, 48);
             this.btnGuess.TabIndex = 5;
             this.btnGuess.Text = "Exam_Guess";
             this.btnGuess.UseVisualStyleBackColor = false;
@@ -113,9 +137,10 @@
             this.button2.BackColor = System.Drawing.Color.RosyBrown;
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(20, 489);
+            this.button2.Location = new System.Drawing.Point(27, 611);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 38);
+            this.button2.Size = new System.Drawing.Size(235, 48);
             this.button2.TabIndex = 4;
             this.button2.Text = "0716_OXGame";
             this.button2.UseVisualStyleBackColor = false;
@@ -126,9 +151,10 @@
             this.button1.BackColor = System.Drawing.Color.RosyBrown;
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(20, 227);
+            this.button1.Location = new System.Drawing.Point(27, 284);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 38);
+            this.button1.Size = new System.Drawing.Size(235, 48);
             this.button1.TabIndex = 3;
             this.button1.Text = "0708_Student_StructForm";
             this.button1.UseVisualStyleBackColor = false;
@@ -139,9 +165,10 @@
             this.btnpos.BackColor = System.Drawing.Color.RosyBrown;
             this.btnpos.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnpos.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnpos.Location = new System.Drawing.Point(20, 173);
+            this.btnpos.Location = new System.Drawing.Point(27, 216);
+            this.btnpos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnpos.Name = "btnpos";
-            this.btnpos.Size = new System.Drawing.Size(176, 38);
+            this.btnpos.Size = new System.Drawing.Size(235, 48);
             this.btnpos.TabIndex = 2;
             this.btnpos.Text = "0705_POS";
             this.btnpos.UseVisualStyleBackColor = false;
@@ -152,9 +179,10 @@
             this.btnloan.BackColor = System.Drawing.Color.RosyBrown;
             this.btnloan.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnloan.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnloan.Location = new System.Drawing.Point(20, 114);
+            this.btnloan.Location = new System.Drawing.Point(27, 142);
+            this.btnloan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnloan.Name = "btnloan";
-            this.btnloan.Size = new System.Drawing.Size(176, 38);
+            this.btnloan.Size = new System.Drawing.Size(235, 48);
             this.btnloan.TabIndex = 1;
             this.btnloan.Text = "0704_Loan";
             this.btnloan.UseVisualStyleBackColor = false;
@@ -165,32 +193,22 @@
             this.btn0703_Hello.BackColor = System.Drawing.Color.RosyBrown;
             this.btn0703_Hello.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn0703_Hello.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn0703_Hello.Location = new System.Drawing.Point(20, 58);
+            this.btn0703_Hello.Location = new System.Drawing.Point(27, 72);
+            this.btn0703_Hello.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn0703_Hello.Name = "btn0703_Hello";
-            this.btn0703_Hello.Size = new System.Drawing.Size(176, 38);
+            this.btn0703_Hello.Size = new System.Drawing.Size(235, 48);
             this.btn0703_Hello.TabIndex = 0;
             this.btn0703_Hello.Text = "0703_Hello";
             this.btn0703_Hello.UseVisualStyleBackColor = false;
             this.btn0703_Hello.Click += new System.EventHandler(this.btn0703_Hello_Click);
             // 
-            // btnStudentGradeList
-            // 
-            this.btnStudentGradeList.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnStudentGradeList.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnStudentGradeList.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnStudentGradeList.Location = new System.Drawing.Point(21, 364);
-            this.btnStudentGradeList.Name = "btnStudentGradeList";
-            this.btnStudentGradeList.Size = new System.Drawing.Size(176, 38);
-            this.btnStudentGradeList.TabIndex = 6;
-            this.btnStudentGradeList.Text = "0710_studentGrade_list";
-            this.btnStudentGradeList.UseVisualStyleBackColor = false;
-            // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 844);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomePage";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);

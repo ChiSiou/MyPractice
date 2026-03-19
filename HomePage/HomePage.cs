@@ -52,5 +52,11 @@ namespace HomePage
             GuessNumber open = new GuessNumber();
             open.Show();
         }
+
+        private void btnStudentGradeList_Click(object sender, EventArgs e)
+        {
+            StudentGrade_List open = new StudentGrade_List();
+            open.Show();
+        }
     }
 }
