@@ -31,12 +31,13 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnGuess = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnpos = new System.Windows.Forms.Button();
             this.btnloan = new System.Windows.Forms.Button();
             this.btn0703_Hello = new System.Windows.Forms.Button();
-            this.btnGuess = new System.Windows.Forms.Button();
+            this.btnStudentGradeList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,6 +84,7 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Wheat;
+            this.splitContainer2.Panel1.Controls.Add(this.btnStudentGradeList);
             this.splitContainer2.Panel1.Controls.Add(this.btnGuess);
             this.splitContainer2.Panel1.Controls.Add(this.button2);
             this.splitContainer2.Panel1.Controls.Add(this.button1);
@@ -92,6 +94,19 @@
             this.splitContainer2.Size = new System.Drawing.Size(1443, 766);
             this.splitContainer2.SplitterDistance = 218;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btnGuess
+            // 
+            this.btnGuess.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnGuess.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnGuess.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGuess.Location = new System.Drawing.Point(20, 542);
+            this.btnGuess.Name = "btnGuess";
+            this.btnGuess.Size = new System.Drawing.Size(176, 38);
+            this.btnGuess.TabIndex = 5;
+            this.btnGuess.Text = "Exam_Guess";
+            this.btnGuess.UseVisualStyleBackColor = false;
+            this.btnGuess.Click += new System.EventHandler(this.btnGuess_Click);
             // 
             // button2
             // 
@@ -158,18 +173,17 @@
             this.btn0703_Hello.UseVisualStyleBackColor = false;
             this.btn0703_Hello.Click += new System.EventHandler(this.btn0703_Hello_Click);
             // 
-            // btnGuess
+            // btnStudentGradeList
             // 
-            this.btnGuess.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnGuess.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnGuess.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGuess.Location = new System.Drawing.Point(20, 542);
-            this.btnGuess.Name = "btnGuess";
-            this.btnGuess.Size = new System.Drawing.Size(176, 38);
-            this.btnGuess.TabIndex = 5;
-            this.btnGuess.Text = "Exam_Guess";
-            this.btnGuess.UseVisualStyleBackColor = false;
-            this.btnGuess.Click += new System.EventHandler(this.btnGuess_Click);
+            this.btnStudentGradeList.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnStudentGradeList.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnStudentGradeList.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnStudentGradeList.Location = new System.Drawing.Point(21, 364);
+            this.btnStudentGradeList.Name = "btnStudentGradeList";
+            this.btnStudentGradeList.Size = new System.Drawing.Size(176, 38);
+            this.btnStudentGradeList.TabIndex = 6;
+            this.btnStudentGradeList.Text = "0710_studentGrade_list";
+            this.btnStudentGradeList.UseVisualStyleBackColor = false;
             // 
             // HomePage
             // 
@@ -202,6 +216,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnGuess;
+        private System.Windows.Forms.Button btnStudentGradeList;
     }
 }
 

@@ -96,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentGrade_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGrade_List.Designer.cs">
+      <DependentUpon>StudentGrade_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentScore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentGrade_List.resx">
+      <DependentUpon>StudentGrade_List.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentScore.resx">
       <DependentUpon>StudentScore.cs</DependentUpon>
     </EmbeddedResource>
