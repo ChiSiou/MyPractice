@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static HomePage.StudentGrade_List;
 
 namespace HomePage
 {
@@ -24,8 +25,10 @@ namespace HomePage
         int math;
         int total;
         float avg;
-        string hightsub;
+        string highsub;
         string lowsub;
+
+        List<student_score> student_Scores = new List<student_score>();
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
             try
@@ -47,8 +50,12 @@ namespace HomePage
                 int minscore = score.Values.Min();
                 string minsubject = score.Keys.Min();
 
-                hightsub = $"{maxsubject}{maxscore}";
+                highsub = $"{maxsubject}{maxscore}";
                 lowsub = $"{minsubject}{minscore}";
+
+                student_score stu = new student_score(name, chinese, english, math, total, avg, highsub, lowsub);
+                student_Scores.Add(stu);
+
 
                 ListViewItem student_score = new ListViewItem(name);
                 student_score.SubItems.Add((chinese).ToString());
@@ -56,7 +63,7 @@ namespace HomePage
                 student_score.SubItems.Add((math).ToString());
                 student_score.SubItems.Add((total).ToString());
                 student_score.SubItems.Add((avg).ToString());
-                student_score.SubItems.Add((hightsub).ToString());
+                student_score.SubItems.Add((highsub).ToString());
                 student_score.SubItems.Add((lowsub).ToString());
                 lvstudent_score.Items.Add(student_score);
 
@@ -89,8 +96,11 @@ namespace HomePage
                 int minscore = score.Values.Min();
                 string minsubject = score.Keys.Min();
 
-                hightsub = $"{maxsubject}{maxscore}";
+                highsub = $"{maxsubject}{maxscore}";
                 lowsub = $"{minsubject}{minscore}";
+
+                student_score stu = new student_score(name, chinese, english, math, total, avg, highsub, lowsub);
+                student_Scores.Add(stu);
 
                 ListViewItem student_score = new ListViewItem(name);
                 student_score.SubItems.Add((chinese).ToString());
@@ -98,7 +108,7 @@ namespace HomePage
                 student_score.SubItems.Add((math).ToString());
                 student_score.SubItems.Add((total).ToString());
                 student_score.SubItems.Add((avg).ToString());
-                student_score.SubItems.Add((hightsub).ToString());
+                student_score.SubItems.Add((highsub).ToString());
                 student_score.SubItems.Add((lowsub).ToString());
                 lvstudent_score.Items.Insert(0,student_score);
 
@@ -106,6 +116,60 @@ namespace HomePage
             catch
             {
                 MessageBox.Show("請填入正確資料", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            lvstudent_score.Items.Clear();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            lvstudent_score.Items.RemoveAt(0);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int lowscore = int.Parse(txtlow.Text);
+                int highscore = int.Parse(txthigh.Text);
+                foreach( ListViewItem item in lvstudent_score.Items)
+                {
+                    if (!(int.Parse(item.SubItems[1].Text) >= lowscore && int.Parse(item.SubItems[1].Text) <= highscore))
+                    {
+                        item.Remove();
+                    }
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("請填入正確資料", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public struct student_score
+        {
+            public string name;
+            public int chinese;
+            public int english;
+            public int math;
+            public int total;
+            public float avg;
+            public string highsub;
+            public string lowsub;
+            public student_score(string name, int chinese, int english, int math, int total, float avg, string highsub, string lowsub)
+            {
+                this.name = name;
+                this.chinese = chinese;
+                this.english = english;
+                this.math = math;
+                this.total = total;
+                this.avg = avg;
+                this.highsub = highsub;
+                this.lowsub = lowsub;
             }
         }
     }
