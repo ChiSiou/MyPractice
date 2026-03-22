@@ -58,5 +58,17 @@ namespace HomePage
             StudentGrade_List open = new StudentGrade_List();
             open.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StudentGrade open = new StudentGrade();
+            open.Show();
+        }
+
+        private void btnForDoWhile_Click(object sender, EventArgs e)
+        {
+            ForDoWhile open = new ForDoWhile();
+            open.Show();
+        }
     }
 }
