@@ -257,9 +257,10 @@ namespace HomePage
             step_txt = int.Parse(txtStep.Text);
 
             int sum = 0;
-            if (step_txt >= to_txt)
+
+            if (from_txt > to_txt)
             {
-                sum = from_txt;
+                sum = 0;
             }
             else
             {
@@ -268,6 +269,7 @@ namespace HomePage
                     sum += i;
                 }
             }
+            
             lbresult.Visible = true;
             lbresult.Text = $"{from_txt} 到 {to_txt} 相隔 {step_txt -1}\n加總為 {sum}";
         }
@@ -280,9 +282,10 @@ namespace HomePage
             List<int> list = new List<int>();
             int num_step = from_txt;
             int sum = 0;
-            if (step_txt >= to_txt)
+
+            if (from_txt > to_txt)
             {
-                sum = from_txt;
+                sum = 0;
             }
             else
             {
@@ -305,9 +308,10 @@ namespace HomePage
             List<int> list = new List<int>();
             int num_step = from_txt;
             int sum = 0;
-            if (step_txt >= to_txt)
+
+            if (from_txt > to_txt)
             {
-                sum = from_txt;
+                sum = 0;
             }
             else
             {
@@ -343,6 +347,99 @@ namespace HomePage
         {
             lbresult.Text = string.Empty;
             lbresult.Visible = false;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            int[,] arr_1010 = new int[10,10];
+            for (int i = 0; i < 10; i++)
+            {
+               for (int j = 0; j < 10; j++)
+                {
+                    if (j == 0 || j == 9 || i == 0 || i == 9)
+                    {
+                        arr_1010[i,j] = 1; 
+                    }
+                    else
+                    {
+                        arr_1010[i,j] = 0;
+                    }
+                }
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    sb.Append(arr_1010[i, j] + " ");
+                }
+                sb.AppendLine();
+            }
+            string result = sb.ToString();
+            lbresult.Visible = true;
+            lbresult.Text = $"{result}";
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            int[,] arr_1010 = new int[10, 10];
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (j == 0 || j == 9 || i == 0 || i == 9)
+                    {
+                        arr_1010[i, j] = 0;
+                    }
+                    else
+                    {
+                        arr_1010[i, j] = 1;
+                    }
+                }
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    sb.Append(arr_1010[i, j] + " ");
+                }
+                sb.AppendLine();
+            }
+            string result = sb.ToString();
+            lbresult.Visible = true;
+            lbresult.Text = $"{result}";
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            int[,] arr_1010 = new int[10, 10];
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (i % 2 == j % 2)
+                    {
+                        arr_1010[i, j] = 1;
+                    }
+                    else
+                    {
+                        arr_1010[i, j] = 0;
+                    }
+                }
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    sb.Append(arr_1010[i, j] + " ");
+                }
+                sb.AppendLine();
+            }
+            string result = sb.ToString();
+            lbresult.Visible = true;
+            lbresult.Text = $"{result}";
         }
     }
 }

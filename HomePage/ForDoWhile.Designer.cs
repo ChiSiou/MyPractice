@@ -275,6 +275,7 @@
             this.button8.TabIndex = 10;
             this.button8.Text = "[1010]二維陣列\r\n101010\r\n010101";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -284,6 +285,7 @@
             this.button9.TabIndex = 11;
             this.button9.Text = "[1010]二維陣列 邊-1 內-0";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -293,6 +295,7 @@
             this.button10.TabIndex = 12;
             this.button10.Text = "[1010]二維陣列 邊-0 內-1";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // groupBox4
             // 
