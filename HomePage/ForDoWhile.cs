@@ -29,6 +29,9 @@ namespace HomePage
             "Coconut",
             "Motherfacker"
         };
+        int from_txt ;
+        int to_txt ;
+        int step_txt ;
 
         
         private void btnCheckOddEven_Click(object sender, EventArgs e)
@@ -237,6 +240,109 @@ namespace HomePage
             string after = $"換位前 n1 = {n1} n2 = {n2}";
             lbresult.Visible = true;
             lbresult.Text = $"{before}\n{after}";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            int big = Pick_big(arr0711);
+            int small = Pick_small(arr0711);
+            lbresult.Visible = true;
+            lbresult.Text = $"int陣列arr0711 [1,5, 6, 8, 7, 97, 54, 887, 65, 578]\n最小值為{small}\n最大值為{big}";
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            from_txt = int.Parse(txtFrom.Text);
+            to_txt = int.Parse(txtTo.Text);
+            step_txt = int.Parse(txtStep.Text);
+
+            int sum = 0;
+            if (step_txt >= to_txt)
+            {
+                sum = from_txt;
+            }
+            else
+            {
+                for (int i = from_txt; i <= to_txt; i += step_txt)
+                {
+                    sum += i;
+                }
+            }
+            lbresult.Visible = true;
+            lbresult.Text = $"{from_txt} 到 {to_txt} 相隔 {step_txt -1}\n加總為 {sum}";
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            from_txt = int.Parse(txtFrom.Text);
+            to_txt = int.Parse(txtTo.Text);
+            step_txt = int.Parse(txtStep.Text);
+            List<int> list = new List<int>();
+            int num_step = from_txt;
+            int sum = 0;
+            if (step_txt >= to_txt)
+            {
+                sum = from_txt;
+            }
+            else
+            {
+                while (num_step <= to_txt)
+                {
+                    list.Add(num_step);
+                    sum += num_step;
+                    num_step += step_txt;
+                }
+            }
+            lbresult.Visible = true;
+            lbresult.Text = $"{from_txt} 到 {to_txt} 相隔 {step_txt - 1}\n加總為 {sum}";
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            from_txt = int.Parse(txtFrom.Text);
+            to_txt = int.Parse(txtTo.Text);
+            step_txt = int.Parse(txtStep.Text);
+            List<int> list = new List<int>();
+            int num_step = from_txt;
+            int sum = 0;
+            if (step_txt >= to_txt)
+            {
+                sum = from_txt;
+            }
+            else
+            {
+                do
+                {
+                    list.Add(num_step);
+                    sum += num_step;
+                    num_step += step_txt;
+                }
+                while (num_step <= to_txt);
+            }
+            lbresult.Visible = true;
+            lbresult.Text = $"{from_txt} 到 {to_txt} 相隔 {step_txt - 1}\n加總為 {sum}";
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            int row = int.Parse(txtRow.Text);
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < i + 1; j++)
+                {
+                    sb.Append("*");
+                }
+                sb.AppendLine();
+            }
+            lbresult.Visible = true;
+            lbresult.Text = sb.ToString();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            lbresult.Text = string.Empty;
+            lbresult.Visible = false;
         }
     }
 }

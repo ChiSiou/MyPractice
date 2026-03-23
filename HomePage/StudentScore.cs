@@ -80,5 +80,10 @@ namespace HomePage
             lthighlow.Items.Add($"最高科目成績為 : {highsubject}{highscore}分");
             lthighlow.Items.Add($"最低科目成績為 : {lowsubject}{lowscore}分");
         }
+
+        private void ltscore_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
