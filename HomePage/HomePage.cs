@@ -70,5 +70,11 @@ namespace HomePage
             ForDoWhile open = new ForDoWhile();
             open.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Paint open = new Paint();
+            open.Show();
+        }
     }
 }
