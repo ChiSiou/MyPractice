@@ -94,12 +94,13 @@
     <Compile Include="OXGame.Designer.cs">
       <DependentUpon>OXGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paint.cs">
+    <Compile Include="Paint\Paint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Paint.Designer.cs">
+    <Compile Include="Paint\Paint.Designer.cs">
       <DependentUpon>Paint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paint\PentoolType.cs" />
     <Compile Include="Pos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,7 +151,7 @@
     <EmbeddedResource Include="OXGame.resx">
       <DependentUpon>OXGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Paint.resx">
+    <EmbeddedResource Include="Paint\Paint.resx">
       <DependentUpon>Paint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pos.resx">
