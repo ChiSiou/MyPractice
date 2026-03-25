@@ -96,7 +96,7 @@ namespace HomePage
             int big_L = arr0711_Str[0].Length;
             for (int i = 0; i < arr0711_Str.Length; i++)
             {
-                if(big_L < arr0711_Str[i].Length);
+                if(big_L < arr0711_Str[i].Length)
                 {
                     big_L = arr0711_Str[i].Length;
                     index = i;

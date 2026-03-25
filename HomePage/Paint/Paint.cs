@@ -24,6 +24,7 @@ namespace HomePage
         Pen _pen;
         DrawTool _CurrentTool;
         PentoolType p = new PentoolType();
+        Color CurrentColor = Color.Black;
         public Paint()
         {
 
@@ -32,6 +33,7 @@ namespace HomePage
             _g = Graphics.FromImage(_bm);
             _g.SmoothingMode = SmoothingMode.AntiAlias;
             _pen = new Pen(Color.Black);
+            
         }
 
 
@@ -47,27 +49,32 @@ namespace HomePage
             {
                 switch (_CurrentTool)
                 {
-                    case DrawTool.Pen: case DrawTool.Eraser:
-                       
+                    case DrawTool.Pen: case DrawTool.Eraser: 
                         _end = e.Location;
                         _g.DrawLine(_pen, _start, _end);
                         _start = _end;
+                        pic.Image = _bm;
                         break;
                     case DrawTool.Brush:
                         _end = e.Location;
-                        _g.FillEllipse(_pen.Brush, _end.X - _pen.Width/3 , _end.Y - _pen.Width/3 , _pen.Width, _pen.Width);
                         _g.DrawLine(_pen, _start, _end);
                         _start = _end;
+                        pic.Image = _bm;
+                        break;
+                    case DrawTool.Line:
+                        _end = e.Location;
+                        pic.Invalidate();
                         break;
                 }
-
             }
-            pic.Image = _bm;
         }
+
+
 
         private void btnColor_Click(object sender, EventArgs e)
         {
-            p.PickColor(ref _pen);
+            p.PickColor(ref CurrentColor);
+            _pen = p.picktool(_CurrentTool, pic.BackColor, CurrentColor, _pen.Width);
         }
 
         private void tkbSizeChange_Scroll(object sender, EventArgs e)
@@ -78,36 +85,50 @@ namespace HomePage
         private void btnPen_Click(object sender, EventArgs e)
         {
             _CurrentTool = DrawTool.Pen;
-            _pen = p.picktool(_CurrentTool, pic.BackColor, _pen.Color, _pen.Width);
+            _pen = p.picktool(_CurrentTool, pic.BackColor, CurrentColor, _pen.Width);
         }
 
         private void btnBrush_Click(object sender, EventArgs e)
         {
             _CurrentTool = DrawTool.Brush;
-            _pen = p.picktool(_CurrentTool, pic.BackColor, _pen.Color, _pen.Width);
+            _pen = p.picktool(_CurrentTool, pic.BackColor, CurrentColor, _pen.Width);
         }
 
         private void btnEraser_Click(object sender, EventArgs e)
         {
             _CurrentTool = DrawTool.Eraser;
-            _pen = p.picktool(_CurrentTool, pic.BackColor, _pen.Color, _pen.Width);
+            _pen = p.picktool(_CurrentTool, pic.BackColor, CurrentColor, _pen.Width);
+
         }
 
         private void btnLine_Click(object sender, EventArgs e)
         {
             _CurrentTool = DrawTool.Line;
-            _pen = p.picktool(_CurrentTool, pic.BackColor, _pen.Color, _pen.Width);
+            _pen = p.picktool(_CurrentTool, pic.BackColor, CurrentColor, _pen.Width);
         }
 
         private void btnRentangle_Click(object sender, EventArgs e)
         {
             _CurrentTool = DrawTool.Rentangle;
-            _pen = p.picktool(_CurrentTool, pic.BackColor, _pen.Color, _pen.Width);
+            _pen = p.picktool(_CurrentTool, pic.BackColor, CurrentColor, _pen.Width);
+        }
+
+        private void pic_Paint(object sender, PaintEventArgs e)
+        {
+            if (paint && _CurrentTool == DrawTool.Line)
+            {
+                e.Graphics.DrawLine(_pen, _start, _end);
+            }
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             paint = false;
+            if (_CurrentTool == DrawTool.Line)
+            {
+                _g.DrawLine(_pen, _start, _end);
+                pic.Image = _bm;
+            }
         }
     }
 }

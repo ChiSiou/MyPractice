@@ -22,12 +22,12 @@ namespace PenPickTool
             Rentangle,
         };
         
-        public void PickColor(ref Pen pen)
+        public void PickColor(ref Color CurrentColoren)
         {
             ColorDialog pickcolor = new ColorDialog();
             if (pickcolor.ShowDialog() == DialogResult.OK)
             {
-                pen.Color = pickcolor.Color;
+                CurrentColoren = pickcolor.Color;
             }
         }
         public Pen picktool(DrawTool _CurrentTool, Color backcolor, Color FromColorDialog, float pensize)
