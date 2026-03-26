@@ -49,6 +49,8 @@ namespace PenPickTool
                 case DrawTool.Rentangle:
                     break;
             }
+            pen.StartCap = LineCap.Round;
+            pen.EndCap = LineCap.Round;
             return pen;
         }
     }

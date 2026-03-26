@@ -17,9 +17,9 @@ namespace HomePage
     public partial class Paint : Form
     {
 
-        Bitmap _bm ;
-        Graphics _g ;
-        Point _start , _end;
+        Bitmap _bm;
+        Graphics _g;
+        Point _start, _end;
         bool paint = false;
         Pen _pen;
         DrawTool _CurrentTool;
@@ -33,7 +33,7 @@ namespace HomePage
             _g = Graphics.FromImage(_bm);
             _g.SmoothingMode = SmoothingMode.AntiAlias;
             _pen = new Pen(Color.Black);
-            
+
         }
 
 
@@ -49,7 +49,8 @@ namespace HomePage
             {
                 switch (_CurrentTool)
                 {
-                    case DrawTool.Pen: case DrawTool.Eraser: 
+                    case DrawTool.Pen:
+                    case DrawTool.Eraser:
                         _end = e.Location;
                         _g.DrawLine(_pen, _start, _end);
                         _start = _end;
@@ -65,6 +66,10 @@ namespace HomePage
                         _end = e.Location;
                         pic.Invalidate();
                         break;
+                    case DrawTool.Rentangle:
+                        _end = e.Location;
+                        pic.Invalidate();
+                        break;
                 }
             }
         }
@@ -75,6 +80,7 @@ namespace HomePage
         {
             p.PickColor(ref CurrentColor);
             _pen = p.picktool(_CurrentTool, pic.BackColor, CurrentColor, _pen.Width);
+            pickedcolor.BackColor = CurrentColor;
         }
 
         private void tkbSizeChange_Scroll(object sender, EventArgs e)
@@ -115,6 +121,22 @@ namespace HomePage
 
         private void pic_Paint(object sender, PaintEventArgs e)
         {
+            if (paint)
+            {
+                switch (_CurrentTool)
+                {
+                    case DrawTool.Line:
+                        e.Graphics.DrawLine(_pen, _start, _end);
+                        break;
+                    case DrawTool.Rentangle:
+                        int rect_startx = Math.Min(_start.X, _end.X);
+                        int rect_starty = Math.Min(_start.Y, _end.Y);
+                        int rect_width = Math.Abs(_start.X - _end.X);
+                        int rect_height = Math.Abs(_start.Y - _end.Y);
+                        e.Graphics.DrawRectangle(_pen, rect_startx, rect_starty, rect_width, rect_height);
+                        break;
+                }
+            }
             if (paint && _CurrentTool == DrawTool.Line)
             {
                 e.Graphics.DrawLine(_pen, _start, _end);
@@ -124,10 +146,20 @@ namespace HomePage
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             paint = false;
-            if (_CurrentTool == DrawTool.Line)
+            switch (_CurrentTool)
             {
-                _g.DrawLine(_pen, _start, _end);
-                pic.Image = _bm;
+                case DrawTool.Line:
+                    _g.DrawLine(_pen, _start, _end);
+                    pic.Image = _bm;
+                    break;
+                case DrawTool.Rentangle:
+                    int rect_startx = Math.Min(_start.X, _end.X);
+                    int rect_starty = Math.Min(_start.Y, _end.Y);
+                    int rect_width = Math.Abs(_start.X - _end.X);
+                    int rect_height = Math.Abs(_start.Y - _end.Y);
+                    _g.DrawRectangle(_pen, rect_startx, rect_starty, rect_width, rect_height);
+                    pic.Image = _bm;
+                    break;
             }
         }
     }
