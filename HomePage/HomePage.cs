@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomePage.ScreenSavers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,6 +76,11 @@ namespace HomePage
         {
             Paint open = new Paint();
             open.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ScreenSaver().Show();
         }
     }
 }
