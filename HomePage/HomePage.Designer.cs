@@ -31,6 +31,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnForDoWhile = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -41,7 +43,7 @@
             this.btnpos = new System.Windows.Forms.Button();
             this.btnloan = new System.Windows.Forms.Button();
             this.btn0703_Hello = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -88,6 +90,8 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Wheat;
+            this.splitContainer2.Panel1.Controls.Add(this.button7);
+            this.splitContainer2.Panel1.Controls.Add(this.button6);
             this.splitContainer2.Panel1.Controls.Add(this.button5);
             this.splitContainer2.Panel1.Controls.Add(this.button4);
             this.splitContainer2.Panel1.Controls.Add(this.btnForDoWhile);
@@ -107,12 +111,38 @@
             this.splitContainer2.SplitterDistance = 217;
             this.splitContainer2.TabIndex = 0;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.RosyBrown;
+            this.button6.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button6.ForeColor = System.Drawing.SystemColors.Control;
+            this.button6.Location = new System.Drawing.Point(21, 545);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(176, 38);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "NotePad";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.RosyBrown;
+            this.button5.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button5.ForeColor = System.Drawing.SystemColors.Control;
+            this.button5.Location = new System.Drawing.Point(21, 501);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(176, 38);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Screen Save";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.RosyBrown;
             this.button4.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(21, 601);
+            this.button4.Location = new System.Drawing.Point(20, 457);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(176, 38);
             this.button4.TabIndex = 9;
@@ -125,7 +155,7 @@
             this.btnForDoWhile.BackColor = System.Drawing.Color.RosyBrown;
             this.btnForDoWhile.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnForDoWhile.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnForDoWhile.Location = new System.Drawing.Point(21, 424);
+            this.btnForDoWhile.Location = new System.Drawing.Point(21, 369);
             this.btnForDoWhile.Name = "btnForDoWhile";
             this.btnForDoWhile.Size = new System.Drawing.Size(176, 38);
             this.btnForDoWhile.TabIndex = 8;
@@ -138,7 +168,7 @@
             this.button3.BackColor = System.Drawing.Color.RosyBrown;
             this.button3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(20, 319);
+            this.button3.Location = new System.Drawing.Point(20, 281);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(176, 38);
             this.button3.TabIndex = 7;
@@ -151,7 +181,7 @@
             this.btnStudentGradeList.BackColor = System.Drawing.Color.RosyBrown;
             this.btnStudentGradeList.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnStudentGradeList.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnStudentGradeList.Location = new System.Drawing.Point(21, 364);
+            this.btnStudentGradeList.Location = new System.Drawing.Point(20, 325);
             this.btnStudentGradeList.Name = "btnStudentGradeList";
             this.btnStudentGradeList.Size = new System.Drawing.Size(176, 38);
             this.btnStudentGradeList.TabIndex = 6;
@@ -164,7 +194,7 @@
             this.btnGuess.BackColor = System.Drawing.Color.RosyBrown;
             this.btnGuess.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnGuess.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGuess.Location = new System.Drawing.Point(20, 542);
+            this.btnGuess.Location = new System.Drawing.Point(21, 633);
             this.btnGuess.Name = "btnGuess";
             this.btnGuess.Size = new System.Drawing.Size(176, 38);
             this.btnGuess.TabIndex = 5;
@@ -177,7 +207,7 @@
             this.button2.BackColor = System.Drawing.Color.RosyBrown;
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(20, 489);
+            this.button2.Location = new System.Drawing.Point(20, 413);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(176, 38);
             this.button2.TabIndex = 4;
@@ -237,18 +267,18 @@
             this.btn0703_Hello.UseVisualStyleBackColor = false;
             this.btn0703_Hello.Click += new System.EventHandler(this.btn0703_Hello_Click);
             // 
-            // button5
+            // button7
             // 
-            this.button5.BackColor = System.Drawing.Color.RosyBrown;
-            this.button5.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(21, 645);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(176, 38);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Screen Save";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button7.BackColor = System.Drawing.Color.RosyBrown;
+            this.button7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button7.ForeColor = System.Drawing.SystemColors.Control;
+            this.button7.Location = new System.Drawing.Point(21, 677);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(176, 38);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "Alarm";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // HomePage
             // 
@@ -286,6 +316,8 @@
         private System.Windows.Forms.Button btnForDoWhile;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 

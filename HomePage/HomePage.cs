@@ -1,4 +1,6 @@
-﻿using HomePage.ScreenSavers;
+﻿using HomePage.Alarm;
+using HomePage.Notepad;
+using HomePage.ScreenSavers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,6 +83,16 @@ namespace HomePage
         private void button5_Click(object sender, EventArgs e)
         {
             new ScreenSaver().Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new FrmNotepod().Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new FrmAlarm().Show();  
         }
     }
 }

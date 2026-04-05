@@ -22,23 +22,23 @@ namespace PenPickTool
             Rentangle,
         };
         
-        public void PickColor(ref Color CurrentColoren)
+        public void PickColor(ref Color CurrentColor)
         {
             ColorDialog pickcolor = new ColorDialog();
             if (pickcolor.ShowDialog() == DialogResult.OK)
             {
-                CurrentColoren = pickcolor.Color;
+                CurrentColor = pickcolor.Color;
             }
         }
-        public Pen picktool(DrawTool _CurrentTool, Color backcolor, Color FromColorDialog, float pensize)
+        public Pen picktool(DrawTool _CurrentTool, Color backcolor, Color CurrentColor, float pensize)
         {
-            Pen pen = new Pen(FromColorDialog, pensize);
+            Pen pen = new Pen(CurrentColor, pensize);
             switch (_CurrentTool)
             {
                 case DrawTool.Pen:
                     break;
                 case DrawTool.Brush:
-                    HatchBrush hBrush = new HatchBrush(HatchStyle.Cross, FromColorDialog, Color.Transparent);
+                    HatchBrush hBrush = new HatchBrush(HatchStyle.Cross, CurrentColor, Color.Transparent);
                     pen.Brush = hBrush;
                     break;
                 case DrawTool.Eraser:
