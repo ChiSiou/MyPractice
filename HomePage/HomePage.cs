@@ -1,4 +1,5 @@
 ﻿using HomePage.Alarm;
+using HomePage.MyCul;
 using HomePage.Notepad;
 using HomePage.ScreenSavers;
 using System;
@@ -93,6 +94,11 @@ namespace HomePage
         private void button7_Click(object sender, EventArgs e)
         {
             new FrmAlarm().Show();  
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new FrmClac().Show();
         }
     }
 }

@@ -52,28 +52,28 @@
     <Compile Include="Alarm\FrmAlarm.Designer.cs">
       <DependentUpon>FrmAlarm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForDoWhile.cs">
+    <Compile Include="ForDOWhile\ForDoWhile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForDoWhile.Designer.cs">
+    <Compile Include="ForDOWhile\ForDoWhile.Designer.cs">
       <DependentUpon>ForDoWhile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guess.cs">
+    <Compile Include="GuessNumber\Guess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guess.Designer.cs">
+    <Compile Include="GuessNumber\Guess.Designer.cs">
       <DependentUpon>Guess.cs</DependentUpon>
     </Compile>
-    <Compile Include="GuessNumber.cs">
+    <Compile Include="GuessNumber\GuessNumber.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GuessNumber.Designer.cs">
+    <Compile Include="GuessNumber\GuessNumber.Designer.cs">
       <DependentUpon>GuessNumber.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hello.cs">
+    <Compile Include="Hello\Hello.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hello.Designer.cs">
+    <Compile Include="Hello\Hello.Designer.cs">
       <DependentUpon>Hello.cs</DependentUpon>
     </Compile>
     <Compile Include="HomePage.cs">
@@ -82,17 +82,23 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="loan.cs">
+    <Compile Include="loan\loan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loan.Designer.cs">
+    <Compile Include="loan\loan.Designer.cs">
       <DependentUpon>loan.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoanReport.cs">
+    <Compile Include="loan\LoanReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoanReport.Designer.cs">
+    <Compile Include="loan\LoanReport.Designer.cs">
       <DependentUpon>LoanReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCul\FrmClac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyCul\FrmClac.Designer.cs">
+      <DependentUpon>FrmClac.cs</DependentUpon>
     </Compile>
     <Compile Include="Notepad\FrmNotepod.cs">
       <SubType>Form</SubType>
@@ -100,10 +106,10 @@
     <Compile Include="Notepad\FrmNotepod.Designer.cs">
       <DependentUpon>FrmNotepod.cs</DependentUpon>
     </Compile>
-    <Compile Include="OXGame.cs">
+    <Compile Include="OXGAME\OXGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OXGame.Designer.cs">
+    <Compile Include="OXGAME\OXGame.Designer.cs">
       <DependentUpon>OXGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Paint\Paint.cs">
@@ -113,10 +119,10 @@
       <DependentUpon>Paint.cs</DependentUpon>
     </Compile>
     <Compile Include="Paint\PentoolType.cs" />
-    <Compile Include="Pos.cs">
+    <Compile Include="Pos\Pos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pos.Designer.cs">
+    <Compile Include="Pos\Pos.Designer.cs">
       <DependentUpon>Pos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -132,58 +138,61 @@
     <Compile Include="ScreenSavers\ScreenSaver.Designer.cs">
       <DependentUpon>ScreenSaver.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentGrade.cs">
+    <Compile Include="Student_Grade\StudentGrade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentGrade.Designer.cs">
+    <Compile Include="Student_Grade\StudentGrade.Designer.cs">
       <DependentUpon>StudentGrade.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentGrade_List.cs">
+    <Compile Include="Student_Grade_List\StudentGrade_List.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentGrade_List.Designer.cs">
+    <Compile Include="Student_Grade_List\StudentGrade_List.Designer.cs">
       <DependentUpon>StudentGrade_List.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentScore.cs">
+    <Compile Include="Student_Score\StudentScore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentScore.Designer.cs">
+    <Compile Include="Student_Score\StudentScore.Designer.cs">
       <DependentUpon>StudentScore.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Alarm\FrmAlarm.resx">
       <DependentUpon>FrmAlarm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForDoWhile.resx">
+    <EmbeddedResource Include="ForDOWhile\ForDoWhile.resx">
       <DependentUpon>ForDoWhile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guess.resx">
+    <EmbeddedResource Include="GuessNumber\Guess.resx">
       <DependentUpon>Guess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GuessNumber.resx">
+    <EmbeddedResource Include="GuessNumber\GuessNumber.resx">
       <DependentUpon>GuessNumber.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hello.resx">
+    <EmbeddedResource Include="Hello\Hello.resx">
       <DependentUpon>Hello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loan.resx">
+    <EmbeddedResource Include="loan\loan.resx">
       <DependentUpon>loan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoanReport.resx">
+    <EmbeddedResource Include="loan\LoanReport.resx">
       <DependentUpon>LoanReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyCul\FrmClac.resx">
+      <DependentUpon>FrmClac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Notepad\FrmNotepod.resx">
       <DependentUpon>FrmNotepod.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OXGame.resx">
+    <EmbeddedResource Include="OXGAME\OXGame.resx">
       <DependentUpon>OXGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paint\Paint.resx">
       <DependentUpon>Paint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pos.resx">
+    <EmbeddedResource Include="Pos\Pos.resx">
       <DependentUpon>Pos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -194,13 +203,13 @@
     <EmbeddedResource Include="ScreenSavers\ScreenSaver.resx">
       <DependentUpon>ScreenSaver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentGrade.resx">
+    <EmbeddedResource Include="Student_Grade\StudentGrade.resx">
       <DependentUpon>StudentGrade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentGrade_List.resx">
+    <EmbeddedResource Include="Student_Grade_List\StudentGrade_List.resx">
       <DependentUpon>StudentGrade_List.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentScore.resx">
+    <EmbeddedResource Include="Student_Score\StudentScore.resx">
       <DependentUpon>StudentScore.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
